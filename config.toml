@@ -1,0 +1,45 @@
+base_url = "https://namanbalaji.com"
+title = "Naman Balaji"
+description = "Personal site, and blog."
+default_language = "en"
+theme = "terminimal"
+compile_sass = true
+generate_feeds = true
+feed_filenames = ["rss.xml", "atom.xml"]
+build_search_index = false
+
+taxonomies = [
+    { name = "tags", feed = true },
+    { name = "series", feed = true },
+]
+
+[markdown.highlighting]
+style = "inline"
+theme = "rose-pine-moon"
+error_on_missing_language = false
+
+[extra]
+# One of: blue, green, orange, pink, red. Append -light, -auto for variants.
+accent_color = "green"
+# One of: blue, dark, green, orange, pink, red, light, auto.
+background_color = "red"
+
+logo_text = "Naman"
+author = "Naman Balaji"
+page_titles = "combined"
+enable_post_view_navigation = true
+post_view_navigation_prompt = ""
+
+# KaTeX math rendering (toggled per-page via `extra.katex = true` in the page front-matter,
+# or globally via this flag).
+katex = true
+katex_version = "0.16.11"
+
+menu_items = [
+    { name = "posts", url = "$BASE_URL/posts" },
+    { name = "about", url = "$BASE_URL/about" },
+    { name = "tags", url = "$BASE_URL/tags" },
+    { name = "series", url = "$BASE_URL/series" },
+    { name = "archive", url = "$BASE_URL/archive" },
+    { name = "rss", url = "$BASE_URL/rss.xml" },
+]

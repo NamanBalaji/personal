@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{%- import "macros/title.html" as title_macros -%}
+
+{%- block title -%}
+{{ title_macros::title(page_title=section.title, main_title=config.title) }}
+{%- endblock -%}
+
+{% block content %}
+<div class="post">
+    <h1 class="post-title">All Series</h1>
+
+    {% set series_tax = get_taxonomy(kind="series") %}
+    {% if series_tax.items | length > 0 %}
+        <ul>
+            {% for term in series_tax.items %}
+            <li class="tag-list">
+                <a href="{{ term.permalink | safe }}">
+                    {{ term.name }} ({{ term.pages | length }} post{{ term.pages | length | pluralize }})
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p><em>No series yet — posts grouped into a series will show up here.</em></p>
+    {% endif %}
+</div>
+{% endblock content %}

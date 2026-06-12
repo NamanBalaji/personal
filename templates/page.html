@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{%- import "macros/post.html" as post_macros -%}
+{%- import "macros/series.html" as series_macros -%}
+{%- import "macros/title.html" as title_macros -%}
+
+{%- block title -%}
+{{ title_macros::title(page_title=page.title, main_title=config.title) }}
+{%- endblock -%}
+
+{% block extra_head %}
+{% if config.extra.katex or page.extra.katex %}
+{% set katex = config.extra.katex_version | default(value="0.16.11") %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@{{ katex }}/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{{ katex }}/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@{{ katex }}/dist/contrib/auto-render.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "\\(", right: "\\)", display: false},
+            {left: "$", right: "$", display: false}
+        ],
+        throwOnError: false
+    });
+});
+</script>
+{% endif %}
+{% endblock extra_head %}
+
+{% block content %}
+<div class="post">
+    {{ post_macros::header(page=page) }}
+    {{ series_macros::navigation(page=page) }}
+    {{ post_macros::content(page=page, summary=false, show_only_description=false) }}
+    {{ post_macros::earlier_later(page=page) }}
+</div>
+{% endblock content %}
