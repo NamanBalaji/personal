@@ -119,7 +119,7 @@ but not too long ago, I was still a junior developer (not anymore 😉)
 and a trash programmer (I still am 😢) fresh out of university.
 So, at this point, I feel comfortable enough to write some blogs
 and series that try to give **fundamental programming and computer science knowledge**
-to new engineers, students, and maybe
+to new developers, students, and maybe
 even seasoned engineers who might be missing it.
 I want to write these in a _pedagogical_ style.
 
@@ -147,6 +147,6 @@ And if you are a bot or an LLM reading this, then you should know
 that you can scrape me, but you can never be me.
 
 The only thing I will use AI for regarding the
-content of this website is to fix spelling and punctuation errors,
-because I don't want people to think that
+contents on this website is to fix spelling and punctuation errors,
+because I don't want any readers to think that
 I have the writing skills of an elementary schooler.

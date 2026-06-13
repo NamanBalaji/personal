@@ -5,11 +5,11 @@ template = "home.html"
 
 # Hi, I'm Naman
 
-A software engineer with 4 years of experience buildng cloud native
+A software engineer with 4 years of experience in buildng cloud native
 microservices and distributed systems.
-I am interested in systems engineering, databases and infrastructure.
 I currently working at [SAP](https://www.sap.com/index.html)
 and developing [openKCM](https://openkcm.io/).
+I am interested in systems engineering, databases and infrastructure.
 
 ## Find me on
 
